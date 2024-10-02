@@ -28,14 +28,11 @@ def show_main(request):
 def create_mood_entry(request):
     form = MoodEntryForm(request.POST or None)
 
-    if form.is_valid():
-        user = form.get_user()
-        login(request, user)
-        response = HttpResponseRedirect(reverse("main:show_main"))
-        response.set_cookie('last_login', str(datetime.datetime.now()))
-        return response
-    else:
-        messages.error(request, "Invalid username or password. Please try again.")
+    if form.is_valid() and request.method == "POST":
+        mood_entry = form.save(commit=False)
+        mood_entry.user = request.user
+        mood_entry.save()
+        return redirect('main:show_main')
 
     context = {'form': form}
     return render(request, "create_mood_entry.html", context)
