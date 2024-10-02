@@ -133,5 +133,8 @@ else:
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = ["http://localhost","http://127.0.0.1","http://nisrina.annaisha:4XqHnfSKUn62sRqrp7PBq2xxQQJMSMHY@pbp.cs.ui.ac.id/nisrina.annaisha/mentalhealthtrackerr", "https://nisrina.annaisha:4XqHnfSKUn62sRqrp7PBq2xxQQJMSMHY@pbp.cs.ui.ac.id/nisrina.annaisha/mentalhealthtrackerr"]
+#CSRF_TRUSTED_ORIGINS = ["http://localhost","http://127.0.0.1","http://nisrina.annaisha@pbp.cs.ui.ac.id/nisrina.annaisha/mentalhealthtrackerr", "https://nisrina.annaisha:4XqHnfSKUn62sRqrp7PBq2xxQQJMSMHY@pbp.cs.ui.ac.id/nisrina.annaisha/mentalhealthtrackerr"]
+
+
+CSRF_TRUSTED_ORIGINS = ["http://localhost","http://127.0.0.1","http://nisrina-annaisha-mentalhealthtrackerr.pbp.cs.ui.ac.id", "https://nisrina-annaisha-mentalhealthtrackerr.pbp.cs.ui.ac.id"]
 
